@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
+from sklearn.metrics import plot_confusion_matrix , plot_roc_curve, plot_precision_recall_curve
 from sklearn.metrics import precision_score, recall_score
 
 def main():
@@ -17,7 +17,7 @@ def main():
 
     @st.cache(persist=True)
     def load_data():
-        data = pd.read_csv("path\\to\\mushrooms.csv")
+        data = pd.read_csv("C:\\Users\\ULTRA\\Desktop\\ML_Web_App-master\\Project\\mushrooms.csv")
         labelencoder=LabelEncoder()
         for col in data.columns:
             data[col] = labelencoder.fit_transform(data[col])
